@@ -7,6 +7,9 @@
 //
 
 #import "wwwAppDelegate.h"
+#import "RootViewController_iPad.h"
+#import "RootViewController_iPhone.h"
+
 
 @implementation wwwAppDelegate
 
@@ -26,12 +29,10 @@
     //Depending on device, make an appropriate root view controller
     UIViewController *viewController;
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-        viewController = [[UISplitViewController alloc] init];
-        viewController.title = @"This is an ipad";
+        viewController = [[RootViewController_iPad alloc] init];
         
     } else { 
-        viewController = [[UITableViewController alloc] init];
-        viewController.title = @"This is an iphone";
+        viewController = [[RootViewController_iPhone alloc] init];
     }
     
     //Add the viewController's view to the window
