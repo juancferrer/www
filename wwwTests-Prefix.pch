@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'wwwTests' target in the 'wwwTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
