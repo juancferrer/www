@@ -14,7 +14,29 @@
 @synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"BASE application didFinishLaunchingWithOptions");
+    
+    // Make a window and add it to app delegate's window
+    UIWindow *localWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    localWindow.backgroundColor = [UIColor redColor];
+    self.window = localWindow;
+    [localWindow release];
+    
 
+    //Depending on device, make an appropriate root view controller
+    UIViewController *viewController;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        viewController = [[UISplitViewController alloc] init];
+        viewController.title = @"This is an ipad";
+        
+    } else { 
+        viewController = [[UITableViewController alloc] init];
+        viewController.title = @"This is an iphone";
+    }
+    
+    [self.window addSubview: viewController.view];
+    NSLog(@"%@", viewController.title);
+    
     // Override point for customization after application launch.
     [window makeKeyAndVisible];
     return YES;

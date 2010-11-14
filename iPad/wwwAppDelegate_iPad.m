@@ -15,7 +15,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
+	NSLog(@"IPAD application didFinishLaunchingWithOptions");
     // Override point for customization after application launch.
 	
     [window makeKeyAndVisible];
