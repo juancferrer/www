@@ -34,6 +34,7 @@
         viewController.title = @"This is an iphone";
     }
     
+    //Add the viewController's view to the window
     [self.window addSubview: viewController.view];
     NSLog(@"%@", viewController.title);
     

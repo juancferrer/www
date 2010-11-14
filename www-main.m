@@ -10,7 +10,14 @@
 
 int main(int argc, char *argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"wwwAppDelegate");
+    
+    //Use device app delegate
+    int retVal;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        retVal = UIApplicationMain(argc, argv, nil, @"wwwAppDelegate_iPad");
+    } else {
+        retVal = UIApplicationMain(argc, argv, nil, @"wwwAppDelegate_iPhone");
+    }
     [pool release];
     return retVal;
 }
