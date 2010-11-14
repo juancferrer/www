@@ -16,8 +16,14 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         // Custom initialization
+        self.title = @"iPad";
+        
+        UITableViewController *leftController = [[UITableViewController alloc] init];
+        UIViewController *rightController = [[UIViewController alloc] init];
+        rightController.view = [[MKMapView alloc] init];
+        
+        self.viewControllers = [[NSArray alloc] initWithObjects:leftController, rightController, nil];
     }
-    self.title = @"iPad";
     return self;
 }
 

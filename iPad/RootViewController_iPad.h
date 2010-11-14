@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-
-@interface RootViewController_iPad : UIViewController {
+@interface RootViewController_iPad : UISplitViewController {
 
 }
 
