@@ -16,6 +16,8 @@
 
 @synthesize window;
 
+@synthesize facebook;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"BASE application didFinishLaunchingWithOptions");
     
@@ -42,6 +44,10 @@
     // Override point for customization after application launch.
     [window makeKeyAndVisible];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [self.facebook handleOpenURL:url];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

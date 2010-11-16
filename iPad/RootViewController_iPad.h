@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface RootViewController_iPad : UISplitViewController {
+#import "wwwAppDelegate_iPad.h"
 
+@interface RootViewController_iPad : UISplitViewController {
+    
 }
 
 @end

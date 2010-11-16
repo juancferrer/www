@@ -15,21 +15,28 @@
 #pragma mark -
 #pragma mark Initialization
 
-
+/*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if ((self = [super initWithStyle:style])) {
     }
-    self.title = @"iPhone";
     return self;
 }
+ */
 
 
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView {
+    [super loadView];
+    self.title = @"iPhone";
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -38,8 +45,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
-*/
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "wwwAppDelegate_iPhone.h"
+
 
 @interface RootViewController_iPhone : UITableViewController {
     
